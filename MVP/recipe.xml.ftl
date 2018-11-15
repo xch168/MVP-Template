@@ -7,17 +7,20 @@
 </#if>
 
     <instantiate from="root/src/app_package/Activity.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${activityClass}.${ktOrJavaExt}" />
+                   to="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${activityClass}.${ktOrJavaExt}" />
 
     <instantiate from="root/src/app_package/Fragment.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${fragmentClass}.${ktOrJavaExt}" />    
+                   to="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${fragmentClass}.${ktOrJavaExt}" />    
 
     <instantiate from="root/src/app_package/Contract.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${contractClass}.${ktOrJavaExt}" />
+                   to="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${contractClass}.${ktOrJavaExt}" />
 
     <instantiate from="root/src/app_package/Presenter.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${presenterClass}.${ktOrJavaExt}" />   
+                   to="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${presenterClass}.${ktOrJavaExt}" />   
 
-    <open file="${escapeXmlAttribute(srcOut)}/${activityClass}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${activityClass}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${fragmentClass}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${contractClass}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${pagePackage?replace('.', '/')}/${presenterClass}.${ktOrJavaExt}" />
 
 </recipe>

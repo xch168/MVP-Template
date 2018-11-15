@@ -1,9 +1,18 @@
-package ${packageName};
+package ${packageName}.${pagePackage};
 
-import ${superClassFqcn};
-import android.os.Bundle;
+public class ${presenterClass} implements ${contractClass}.Presenter {
 
-public class ${presenterClass} implement ${contractClass}.Presenter {
+    private final ${contractClass}.View mView;
 
-    
+    public ${presenterClass}(${contractClass}.View view) {
+
+        mView = checkNotNull(mView, "view cannot be null!");
+
+        mView.setPresenter(this);
+    }
+
+    @Override
+    public void start() {
+        
+    }
 }

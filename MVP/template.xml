@@ -86,6 +86,15 @@
         constraints="package"
         default="com.mycompany.myapp" />
 
+    <parameter
+        id="pagePackage"
+        name="Page package path"
+        type="string"
+        constraints="package"
+        suggest="ui.${classToResource(fragmentClass)?replace('_', '')}"
+        default="ui.main"
+        help="The package path for the page." />
+
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->

@@ -6,7 +6,7 @@ public class ${presenterClass} implements ${contractClass}.Presenter {
 
     public ${presenterClass}(${contractClass}.View view) {
 
-        mView = checkNotNull(mView, "view cannot be null!");
+        mView = view;
 
         mView.setPresenter(this);
     }
